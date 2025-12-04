@@ -1,15 +1,266 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Design System Colors - Extracted from Figma */
+  --color-cyan: #00B6FF;
+  --color-kelly-green: #24CB71;
+  --color-coral: #FF7676;
+  --color-hot-red: #FF3737;
+  --color-purple: #874FFF;
+  --color-white: #FFFFFF;
+  --color-blue: #4D49FC;
+  --color-black: #000000;
+
+  /* Semantic Colors */
+  --background: var(--color-white);
+  --foreground: var(--color-black);
+  
+  /* Primary Colors */
+  --color-primary: var(--color-blue);
+  --color-secondary: var(--color-purple);
+  
+  /* Accent Colors */
+  --color-accent-cyan: var(--color-cyan);
+  --color-accent-green: var(--color-kelly-green);
+  --color-accent-coral: var(--color-coral);
+  
+  /* Status Colors */
+  --color-success: var(--color-kelly-green);
+  --color-error: var(--color-hot-red);
+  --color-warning: var(--color-coral);
+
+  /* Typography - Font Families */
+  --font-family-sans: 'Whyte', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-mono: 'Geist Mono', 'Courier New', monospace;
+
+  /* Typography - Font Sizes */
+  --font-size-xs: 0.75rem;      /* 12px */
+  --font-size-sm: 0.875rem;     /* 14px */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;     /* 18px */
+  --font-size-xl: 1.25rem;      /* 20px */
+  --font-size-2xl: 1.5rem;      /* 24px */
+  --font-size-3xl: 1.875rem;    /* 30px */
+  --font-size-4xl: 2.25rem;     /* 36px */
+  --font-size-5xl: 3rem;        /* 48px */
+  --font-size-6xl: 3.75rem;     /* 60px */
+  --font-size-7xl: 4.5rem;      /* 72px */
+  --font-size-8xl: 6rem;        /* 96px */
+  --font-size-9xl: 11.75rem;    /* 188px - Title size from Figma */
+
+  /* Typography - Line Heights */
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+  --line-height-display: 0.9;   /* From Figma design */
+
+  /* Typography - Letter Spacing */
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+  --letter-spacing-display: -3.76px; /* From Figma design */
+
+  /* Typography - Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem;    /* 4px */
+  --spacing-sm: 0.5rem;      /* 8px */
+  --spacing-md: 1rem;        /* 16px */
+  --spacing-lg: 1.25rem;     /* 20px - From Figma gap */
+  --spacing-xl: 1.5rem;      /* 24px */
+  --spacing-2xl: 2rem;       /* 32px */
+  --spacing-3xl: 3rem;       /* 48px */
+  --spacing-4xl: 4rem;       /* 64px */
+  --spacing-5xl: 4.5rem;     /* 72px */
+  --spacing-6xl: 5rem;       /* 80px - From Figma padding */
+  --spacing-7xl: 5.625rem;   /* 90px - From Figma padding */
+  --spacing-8xl: 6.25rem;    /* 100px - From Figma padding */
+
+  /* Sizing Scale */
+  --sizing-xs: 0.5rem;       /* 8px */
+  --sizing-sm: 1rem;         /* 16px */
+  --sizing-md: 1.5rem;       /* 24px */
+  --sizing-lg: 2rem;         /* 32px */
+  --sizing-xl: 3rem;         /* 48px */
+  --sizing-2xl: 4rem;        /* 64px */
+  --sizing-3xl: 6rem;        /* 96px */
+  --sizing-4xl: 8rem;        /* 128px */
+  --sizing-5xl: 12rem;       /* 192px */
+  --sizing-full: 100%;
+  --sizing-auto: auto;
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 0.25rem;      /* 4px */
+  --radius-md: 0.5rem;       /* 8px */
+  --radius-lg: 1rem;         /* 16px */
+  --radius-xl: 1.5rem;       /* 24px */
+  --radius-2xl: 2.5rem;      /* 40px - From Figma */
+  --radius-3xl: 12.5rem;     /* 200px - From Figma */
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-none: none;
+
+  /* Z-Index Scale */
+  --z-index-base: 0;
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
 }
 
 @theme inline {
+  /* Color Theme Variables for Tailwind */
+  --color-cyan: #00B6FF;
+  --color-kelly-green: #24CB71;
+  --color-coral: #FF7676;
+  --color-hot-red: #FF3737;
+  --color-purple: #874FFF;
+  --color-white: #FFFFFF;
+  --color-blue: #4D49FC;
+  --color-black: #000000;
+  
+  /* Semantic Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent-cyan: var(--color-accent-cyan);
+  --color-accent-green: var(--color-accent-green);
+  --color-accent-coral: var(--color-accent-coral);
+  --color-success: var(--color-success);
+  --color-error: var(--color-error);
+  --color-warning: var(--color-warning);
+  
+  /* Typography - Font Families */
+  --font-sans: var(--font-family-sans);
+  --font-mono: var(--font-family-mono);
+  --font-geist-sans: var(--font-geist-sans);
+  --font-geist-mono: var(--font-geist-mono);
+  
+  /* Typography - Font Sizes */
+  --font-size-xs: var(--font-size-xs);
+  --font-size-sm: var(--font-size-sm);
+  --font-size-base: var(--font-size-base);
+  --font-size-lg: var(--font-size-lg);
+  --font-size-xl: var(--font-size-xl);
+  --font-size-2xl: var(--font-size-2xl);
+  --font-size-3xl: var(--font-size-3xl);
+  --font-size-4xl: var(--font-size-4xl);
+  --font-size-5xl: var(--font-size-5xl);
+  --font-size-6xl: var(--font-size-6xl);
+  --font-size-7xl: var(--font-size-7xl);
+  --font-size-8xl: var(--font-size-8xl);
+  --font-size-9xl: var(--font-size-9xl);
+  
+  /* Typography - Line Heights */
+  --line-height-none: var(--line-height-none);
+  --line-height-tight: var(--line-height-tight);
+  --line-height-snug: var(--line-height-snug);
+  --line-height-normal: var(--line-height-normal);
+  --line-height-relaxed: var(--line-height-relaxed);
+  --line-height-loose: var(--line-height-loose);
+  --line-height-display: var(--line-height-display);
+  
+  /* Typography - Letter Spacing */
+  --letter-spacing-tighter: var(--letter-spacing-tighter);
+  --letter-spacing-tight: var(--letter-spacing-tight);
+  --letter-spacing-normal: var(--letter-spacing-normal);
+  --letter-spacing-wide: var(--letter-spacing-wide);
+  --letter-spacing-wider: var(--letter-spacing-wider);
+  --letter-spacing-widest: var(--letter-spacing-widest);
+  --letter-spacing-display: var(--letter-spacing-display);
+  
+  /* Typography - Font Weights */
+  --font-weight-light: var(--font-weight-light);
+  --font-weight-normal: var(--font-weight-normal);
+  --font-weight-medium: var(--font-weight-medium);
+  --font-weight-semibold: var(--font-weight-semibold);
+  --font-weight-bold: var(--font-weight-bold);
+  --font-weight-extrabold: var(--font-weight-extrabold);
+  
+  /* Spacing Scale */
+  --spacing-xs: var(--spacing-xs);
+  --spacing-sm: var(--spacing-sm);
+  --spacing-md: var(--spacing-md);
+  --spacing-lg: var(--spacing-lg);
+  --spacing-xl: var(--spacing-xl);
+  --spacing-2xl: var(--spacing-2xl);
+  --spacing-3xl: var(--spacing-3xl);
+  --spacing-4xl: var(--spacing-4xl);
+  --spacing-5xl: var(--spacing-5xl);
+  --spacing-6xl: var(--spacing-6xl);
+  --spacing-7xl: var(--spacing-7xl);
+  --spacing-8xl: var(--spacing-8xl);
+  
+  /* Sizing Scale */
+  --sizing-xs: var(--sizing-xs);
+  --sizing-sm: var(--sizing-sm);
+  --sizing-md: var(--sizing-md);
+  --sizing-lg: var(--sizing-lg);
+  --sizing-xl: var(--sizing-xl);
+  --sizing-2xl: var(--sizing-2xl);
+  --sizing-3xl: var(--sizing-3xl);
+  --sizing-4xl: var(--sizing-4xl);
+  --sizing-5xl: var(--sizing-5xl);
+  --sizing-full: var(--sizing-full);
+  --sizing-auto: var(--sizing-auto);
+  
+  /* Border Radius */
+  --radius-none: var(--radius-none);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
+  --radius-3xl: var(--radius-3xl);
+  --radius-full: var(--radius-full);
+  
+  /* Shadows */
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+  --shadow-none: var(--shadow-none);
+  
+  /* Z-Index */
+  --z-index-base: var(--z-index-base);
+  --z-index-dropdown: var(--z-index-dropdown);
+  --z-index-sticky: var(--z-index-sticky);
+  --z-index-fixed: var(--z-index-fixed);
+  --z-index-modal-backdrop: var(--z-index-modal-backdrop);
+  --z-index-modal: var(--z-index-modal);
+  --z-index-popover: var(--z-index-popover);
+  --z-index-tooltip: var(--z-index-tooltip);
+  
+  /* Responsive Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +273,49 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-sans), Arial, Helvetica, sans-serif;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* Typography Text Styles */
+.text-title {
+  font-size: var(--font-size-9xl);
+  line-height: var(--line-height-display);
+  letter-spacing: var(--letter-spacing-display);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-sans);
+}
+
+.text-heading {
+  font-size: var(--font-size-5xl);
+  line-height: 1.2;
+  letter-spacing: var(--letter-spacing-tight);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-sans);
+}
+
+.text-subheading {
+  font-size: var(--font-size-2xl);
+  line-height: 1.4;
+  letter-spacing: var(--letter-spacing-tight);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-sans);
+}
+
+.text-body {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-sans);
+}
+
+.text-code {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-mono);
 }
