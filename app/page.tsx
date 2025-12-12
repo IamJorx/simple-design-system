@@ -35,7 +35,9 @@ export default function Home() {
           <p style={{ 
             fontSize: 'var(--font-size-lg)', 
             color: 'var(--sds-color-page-text-secondary)',
-            transition: 'color 0.2s ease-in-out'
+            transition: 'color 0.2s ease-in-out',
+            marginTop: '12px',
+            marginBottom: '12px'
           }}>
             Demostración de todos los componentes de botones con sus variantes y estados
           </p>
@@ -116,7 +118,7 @@ export default function Home() {
             </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div>
-                <p style={{ marginBottom: '0.5rem', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+                <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
                   Primary Variant
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
@@ -126,7 +128,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <p style={{ marginBottom: '0.5rem', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+                <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
                   Neutral Variant
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
@@ -136,7 +138,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <p style={{ marginBottom: '0.5rem', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+                <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
                   Subtle Variant
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
@@ -228,7 +230,7 @@ export default function Home() {
             </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div>
-                <p style={{ marginBottom: '0.5rem', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+                <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
                   Primary Variant
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
@@ -239,7 +241,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <p style={{ marginBottom: '0.5rem', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+                <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
                   Subtle Variant
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
@@ -310,7 +312,7 @@ export default function Home() {
             </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div>
-                <p style={{ marginBottom: '0.5rem', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+                <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
                   Primary Variant
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
@@ -321,7 +323,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <p style={{ marginBottom: '0.5rem', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+                <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
                   Neutral Variant
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
@@ -332,7 +334,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <p style={{ marginBottom: '0.5rem', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+                <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
                   Subtle Variant
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
@@ -369,31 +371,31 @@ export default function Home() {
             </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               <div>
-                <p style={{ marginBottom: '0.5rem', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+                <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
                   Justify (por defecto)
                 </p>
                 <ButtonGroup align="Justify" />
               </div>
               <div>
-                <p style={{ marginBottom: '0.5rem', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+                <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
                   Start
                 </p>
                 <ButtonGroup align="Start" />
               </div>
               <div>
-                <p style={{ marginBottom: '0.5rem', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+                <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
                   End
                 </p>
                 <ButtonGroup align="End" />
               </div>
               <div>
-                <p style={{ marginBottom: '0.5rem', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+                <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
                   Center
                 </p>
                 <ButtonGroup align="Center" />
               </div>
               <div>
-                <p style={{ marginBottom: '0.5rem', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+                <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
                   Stack (vertical)
                 </p>
                 <ButtonGroup align="Stack" />
@@ -413,7 +415,7 @@ export default function Home() {
             </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               <div>
-                <p style={{ marginBottom: '0.5rem', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+                <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
                   Custom Buttons - Start Alignment
                 </p>
                 <ButtonGroup 
@@ -423,7 +425,7 @@ export default function Home() {
                 />
               </div>
               <div>
-                <p style={{ marginBottom: '0.5rem', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+                <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-sm)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
                   Custom Buttons - Stack Alignment
                 </p>
                 <ButtonGroup 
@@ -454,7 +456,7 @@ export default function Home() {
             border: '1px solid var(--sds-color-border-default-default)',
             transition: 'background-color 0.2s ease-in-out, border-color 0.2s ease-in-out'
           }}>
-            <p style={{ marginBottom: '1.5rem', fontSize: 'var(--font-size-base)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
+            <p style={{ marginTop: '12px', marginBottom: '12px', fontSize: 'var(--font-size-base)', color: 'var(--sds-color-page-text-secondary)', transition: 'color 0.2s ease-in-out' }}>
               Estos botones son interactivos - pasa el mouse sobre ellos para ver el estado hover:
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
