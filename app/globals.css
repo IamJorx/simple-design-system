@@ -29,6 +29,217 @@
   --color-error: var(--color-hot-red);
   --color-warning: var(--color-coral);
 
+  /* Foundation Color Scales */
+  
+  /* Red Scale - Base for Danger colors */
+  --color-red-50: #fee9e7;
+  --color-red-100: #fdd3d0;
+  --color-red-200: #ec221f;
+  --color-red-300: #c00f0c;
+  --color-red-400: #900b09;
+  
+  /* Blue Scale - Base for Brand/Primary colors */
+  --color-blue-50: #f5f5f5;
+  --color-blue-100: #4D49FC;
+  --color-blue-200: #2c2c2c;
+  --color-blue-300: #1e1e1e;
+  
+  /* Green Scale - Base for Success colors */
+  --color-green-50: #24CB71;
+  --color-green-100: #1ea85a;
+  --color-green-200: #158548;
+  
+  /* Gray/Neutral Scale - Base for Neutral, Default, Disabled colors */
+  --color-gray-50: #f5f5f5;
+  --color-gray-100: #e6e6e6;
+  --color-gray-200: #e3e3e3;
+  --color-gray-300: #d9d9d9;
+  --color-gray-400: #cdcdcd;
+  --color-gray-500: #b3b3b3;
+  --color-gray-600: #767676;
+  --color-gray-700: #303030;
+  --color-gray-800: #1e1e1e;
+  --color-gray-900: #000000;
+  
+  /* Semantic Colors - Mapped from Foundation Scales */
+  /* These will be overridden by mode-specific values */
+  
+  /* Brand Colors - Based on Gray Scale (dark theme) */
+  --sds-color-background-brand-default: var(--color-gray-200);
+  --sds-color-background-brand-hover: var(--color-gray-800);
+  --sds-color-border-brand-default: var(--color-gray-200);
+  --sds-color-text-brand-on-brand: var(--color-gray-50);
+  
+  /* Danger Colors - Based on Red Scale */
+  --sds-color-background-danger-default: var(--color-red-200);
+  --sds-color-background-danger-hover: var(--color-red-300);
+  --sds-color-background-danger-tertiary-hover: var(--color-red-100);
+  --sds-color-border-danger-default: var(--color-red-400);
+  --sds-color-border-danger-secondary: var(--color-red-300);
+  --sds-color-text-danger-on-danger: var(--color-red-50);
+  --sds-color-text-danger-default: var(--color-red-400);
+  
+  /* Neutral Colors - Based on Gray Scale */
+  --sds-color-background-neutral-tertiary: var(--color-gray-200);
+  --sds-color-background-neutral-tertiary-hover: var(--color-gray-400);
+  --sds-color-border-neutral-secondary: var(--color-gray-600);
+  --sds-color-text-neutral-default: var(--color-gray-700);
+  
+  /* Default/Background Colors - Based on Gray Scale */
+  --sds-color-background-default-secondary: var(--color-gray-50);
+  --sds-color-background-default-secondary-hover: var(--color-gray-100);
+  --sds-color-background-default-default-hover: var(--color-gray-50);
+  --sds-color-border-default-default: var(--color-gray-300);
+  --sds-color-text-default-default: var(--color-gray-800);
+  
+  /* Disabled Colors - Based on Gray Scale */
+  --sds-color-background-disabled-default: var(--color-gray-300);
+  --sds-color-border-disabled-default: var(--color-gray-500);
+  --sds-color-text-disabled-on-disabled: var(--color-gray-500);
+  --sds-color-text-disabled-default: var(--color-gray-500);
+}
+
+/* Color Mode: SDS Light */
+:root[data-color-mode="sds-light"],
+:root:not([data-color-mode]) {
+  /* Brand Colors - Light theme */
+  --sds-color-background-brand-default: #2c2c2c;
+  --sds-color-background-brand-hover: #1e1e1e;
+  --sds-color-border-brand-default: #2c2c2c;
+  --sds-color-text-brand-on-brand: #f5f5f5;
+  
+  /* Danger Colors */
+  --sds-color-background-danger-default: #ec221f;
+  --sds-color-background-danger-hover: #c00f0c;
+  --sds-color-background-danger-tertiary-hover: #fdd3d0;
+  --sds-color-border-danger-default: #900b09;
+  --sds-color-border-danger-secondary: #c00f0c;
+  --sds-color-text-danger-on-danger: #fee9e7;
+  --sds-color-text-danger-default: #900b09;
+  
+  /* Neutral Colors */
+  --sds-color-background-neutral-tertiary: #e3e3e3;
+  --sds-color-background-neutral-tertiary-hover: #cdcdcd;
+  --sds-color-border-neutral-secondary: #767676;
+  --sds-color-text-neutral-default: #303030;
+  
+  /* Default/Background Colors */
+  --sds-color-background-default-secondary: #f5f5f5;
+  --sds-color-background-default-secondary-hover: #e6e6e6;
+  --sds-color-background-default-default-hover: #f5f5f5;
+  --sds-color-border-default-default: #d9d9d9;
+  --sds-color-text-default-default: #1e1e1e;
+  
+  /* Disabled Colors */
+  --sds-color-background-disabled-default: #d9d9d9;
+  --sds-color-border-disabled-default: #b3b3b3;
+  --sds-color-text-disabled-on-disabled: #b3b3b3;
+  --sds-color-text-disabled-default: #b3b3b3;
+  
+  /* Page Background Colors */
+  --sds-color-page-background: #f5f5f5;
+  --sds-color-page-text-primary: #000000;
+  --sds-color-page-text-secondary: #303030;
+}
+
+/* Color Mode: SDS Dark */
+:root[data-color-mode="sds-dark"] {
+  /* Brand Colors - Dark theme */
+  --sds-color-background-brand-default: #4D49FC;
+  --sds-color-background-brand-hover: #3d39cc;
+  --sds-color-border-brand-default: #4D49FC;
+  --sds-color-text-brand-on-brand: #ffffff;
+  
+  /* Danger Colors */
+  --sds-color-background-danger-default: #ec221f;
+  --sds-color-background-danger-hover: #c00f0c;
+  --sds-color-background-danger-tertiary-hover: #4a1f1e;
+  --sds-color-border-danger-default: #900b09;
+  --sds-color-border-danger-secondary: #c00f0c;
+  --sds-color-text-danger-on-danger: #fee9e7;
+  --sds-color-text-danger-default: #ff6b68;
+  
+  /* Neutral Colors */
+  --sds-color-background-neutral-tertiary: #2a2a2a;
+  --sds-color-background-neutral-tertiary-hover: #3a3a3a;
+  --sds-color-border-neutral-secondary: #666666;
+  --sds-color-text-neutral-default: #e0e0e0;
+  
+  /* Default/Background Colors */
+  --sds-color-background-default-secondary: #1a1a1a;
+  --sds-color-background-default-secondary-hover: #2a2a2a;
+  --sds-color-background-default-default-hover: #1a1a1a;
+  --sds-color-border-default-default: #404040;
+  --sds-color-text-default-default: #f5f5f5;
+  
+  /* Disabled Colors */
+  --sds-color-background-disabled-default: #2a2a2a;
+  --sds-color-border-disabled-default: #404040;
+  --sds-color-text-disabled-on-disabled: #666666;
+  --sds-color-text-disabled-default: #666666;
+  
+  /* Page Background Colors */
+  --sds-color-page-background: #0a0a0a;
+  --sds-color-page-text-primary: #f5f5f5;
+  --sds-color-page-text-secondary: #e0e0e0;
+}
+
+/* Color Mode: Brand B Light */
+:root[data-color-mode="brand-b-light"] {
+  /* Brand Colors - Brand B Light theme */
+  --sds-color-background-brand-default: #4D49FC;
+  --sds-color-background-brand-hover: #3d39cc;
+  --sds-color-border-brand-default: #4D49FC;
+  --sds-color-text-brand-on-brand: #ffffff;
+  
+  /* Danger Colors */
+  --sds-color-background-danger-default: #ec221f;
+  --sds-color-background-danger-hover: #c00f0c;
+  --sds-color-background-danger-tertiary-hover: #fdd3d0;
+  --sds-color-border-danger-default: #900b09;
+  --sds-color-border-danger-secondary: #c00f0c;
+  --sds-color-text-danger-on-danger: #fee9e7;
+  --sds-color-text-danger-default: #900b09;
+  
+  /* Neutral Colors */
+  --sds-color-background-neutral-tertiary: #e8e8ff;
+  --sds-color-background-neutral-tertiary-hover: #d0d0ff;
+  --sds-color-border-neutral-secondary: #767676;
+  --sds-color-text-neutral-default: #303030;
+  
+  /* Default/Background Colors */
+  --sds-color-background-default-secondary: #f8f8ff;
+  --sds-color-background-default-secondary-hover: #f0f0ff;
+  --sds-color-background-default-default-hover: #f8f8ff;
+  --sds-color-border-default-default: #d9d9d9;
+  --sds-color-text-default-default: #1e1e1e;
+  
+  /* Disabled Colors */
+  --sds-color-background-disabled-default: #d9d9d9;
+  --sds-color-border-disabled-default: #b3b3b3;
+  --sds-color-text-disabled-on-disabled: #b3b3b3;
+  --sds-color-text-disabled-default: #b3b3b3;
+  
+  /* Spacing - SDS Format */
+  --sds-size-space-200: 0.5rem;  /* 8px */
+  --sds-size-space-300: 0.75rem; /* 12px */
+  --sds-size-space-400: 1rem;   /* 16px */
+  
+  /* Border Radius - SDS Format */
+  --sds-size-radius-200: 0.5rem; /* 8px */
+  
+  /* Stroke/Border */
+  --sds-size-stroke-border: 1px;
+  
+  /* Typography - SDS Format */
+  --sds-typography-body-font-family: var(--font-family-sans);
+  --sds-typography-body-size-medium: var(--font-size-base);
+  --sds-typography-body-font-weight-regular: var(--font-weight-normal);
+  
+  /* Typography Scale for Icon Buttons */
+  --sds-typography-scale-06: 2rem;  /* 32px */
+  --sds-typography-scale-07: 2.5rem; /* 40px */
+
   /* Typography - Font Families */
   --font-family-sans: 'Whyte', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-family-mono: 'Geist Mono', 'Courier New', monospace;
@@ -140,6 +351,33 @@
   --color-white: #FFFFFF;
   --color-blue: #4D49FC;
   --color-black: #000000;
+  
+  /* Foundation Color Scales for Tailwind */
+  --color-red-50: var(--color-red-50);
+  --color-red-100: var(--color-red-100);
+  --color-red-200: var(--color-red-200);
+  --color-red-300: var(--color-red-300);
+  --color-red-400: var(--color-red-400);
+  
+  --color-blue-50: var(--color-blue-50);
+  --color-blue-100: var(--color-blue-100);
+  --color-blue-200: var(--color-blue-200);
+  --color-blue-300: var(--color-blue-300);
+  
+  --color-green-50: var(--color-green-50);
+  --color-green-100: var(--color-green-100);
+  --color-green-200: var(--color-green-200);
+  
+  --color-gray-50: var(--color-gray-50);
+  --color-gray-100: var(--color-gray-100);
+  --color-gray-200: var(--color-gray-200);
+  --color-gray-300: var(--color-gray-300);
+  --color-gray-400: var(--color-gray-400);
+  --color-gray-500: var(--color-gray-500);
+  --color-gray-600: var(--color-gray-600);
+  --color-gray-700: var(--color-gray-700);
+  --color-gray-800: var(--color-gray-800);
+  --color-gray-900: var(--color-gray-900);
   
   /* Semantic Colors */
   --color-background: var(--background);

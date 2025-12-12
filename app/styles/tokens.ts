@@ -16,6 +16,38 @@ export const designTokens = {
     blue: '#4D49FC',
     black: '#000000',
   },
+  colorScales: {
+    red: {
+      50: '#fee9e7',
+      100: '#fdd3d0',
+      200: '#ec221f',
+      300: '#c00f0c',
+      400: '#900b09',
+    },
+    blue: {
+      50: '#f5f5f5',
+      100: '#4D49FC',
+      200: '#2c2c2c',
+      300: '#1e1e1e',
+    },
+    green: {
+      50: '#24CB71',
+      100: '#1ea85a',
+      200: '#158548',
+    },
+    gray: {
+      50: '#f5f5f5',
+      100: '#e6e6e6',
+      200: '#e3e3e3',
+      300: '#d9d9d9',
+      400: '#cdcdcd',
+      500: '#b3b3b3',
+      600: '#767676',
+      700: '#303030',
+      800: '#1e1e1e',
+      900: '#000000',
+    },
+  },
   semantic: {
     primary: '#4D49FC',
     secondary: '#874FFF',
@@ -24,6 +56,72 @@ export const designTokens = {
     warning: '#FF7676',
     background: '#FFFFFF',
     foreground: '#000000',
+  },
+  semanticMapped: {
+    brand: {
+      background: {
+        default: 'var(--color-gray-200)',
+        hover: 'var(--color-gray-800)',
+      },
+      border: {
+        default: 'var(--color-gray-200)',
+      },
+      text: {
+        onBrand: 'var(--color-gray-50)',
+      },
+    },
+    danger: {
+      background: {
+        default: 'var(--color-red-200)',
+        hover: 'var(--color-red-300)',
+        tertiaryHover: 'var(--color-red-100)',
+      },
+      border: {
+        default: 'var(--color-red-400)',
+        secondary: 'var(--color-red-300)',
+      },
+      text: {
+        onDanger: 'var(--color-red-50)',
+        default: 'var(--color-red-400)',
+      },
+    },
+    neutral: {
+      background: {
+        tertiary: 'var(--color-gray-200)',
+        tertiaryHover: 'var(--color-gray-400)',
+      },
+      border: {
+        secondary: 'var(--color-gray-600)',
+      },
+      text: {
+        default: 'var(--color-gray-700)',
+      },
+    },
+    default: {
+      background: {
+        secondary: 'var(--color-gray-50)',
+        secondaryHover: 'var(--color-gray-100)',
+        defaultHover: 'var(--color-gray-50)',
+      },
+      border: {
+        default: 'var(--color-gray-300)',
+      },
+      text: {
+        default: 'var(--color-gray-800)',
+      },
+    },
+    disabled: {
+      background: {
+        default: 'var(--color-gray-300)',
+      },
+      border: {
+        default: 'var(--color-gray-500)',
+      },
+      text: {
+        onDisabled: 'var(--color-gray-500)',
+        default: 'var(--color-gray-500)',
+      },
+    },
   },
   typography: {
     fontFamily: {
@@ -175,6 +273,11 @@ export const designTokens = {
 
 export type ColorToken = keyof typeof designTokens.colors;
 export type SemanticToken = keyof typeof designTokens.semantic;
+export type ColorScaleName = keyof typeof designTokens.colorScales;
+export type RedScaleToken = keyof typeof designTokens.colorScales.red;
+export type BlueScaleToken = keyof typeof designTokens.colorScales.blue;
+export type GreenScaleToken = keyof typeof designTokens.colorScales.green;
+export type GrayScaleToken = keyof typeof designTokens.colorScales.gray;
 export type FontSizeToken = keyof typeof designTokens.typography.fontSize;
 export type LineHeightToken = keyof typeof designTokens.typography.lineHeight;
 export type LetterSpacingToken = keyof typeof designTokens.typography.letterSpacing;
@@ -301,5 +404,35 @@ export const getShadowVar = (token: ShadowToken): string => {
  */
 export const getTextStyle = (token: TextStyleToken) => {
   return designTokens.typography.textStyles[token];
+};
+
+/**
+ * Get color scale value
+ */
+export const getColorScaleValue = (
+  scale: ColorScaleName,
+  shade: RedScaleToken | BlueScaleToken | GreenScaleToken | GrayScaleToken
+): string => {
+  return designTokens.colorScales[scale][shade as keyof typeof designTokens.colorScales[typeof scale]];
+};
+
+/**
+ * Get color scale CSS variable name
+ */
+export const getColorScaleVariable = (
+  scale: ColorScaleName,
+  shade: RedScaleToken | BlueScaleToken | GreenScaleToken | GrayScaleToken
+): string => {
+  return `--color-${scale}-${shade}`;
+};
+
+/**
+ * Get color scale value as CSS variable reference
+ */
+export const getColorScaleVar = (
+  scale: ColorScaleName,
+  shade: RedScaleToken | BlueScaleToken | GreenScaleToken | GrayScaleToken
+): string => {
+  return `var(${getColorScaleVariable(scale, shade)})`;
 };
 
